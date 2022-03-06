@@ -14,7 +14,7 @@ export default function Home({ data }) {
     setId(results.slip.id)
   };
 
-  console.log(data);
+  
 
   return (
     <>
