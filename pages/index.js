@@ -1,15 +1,17 @@
-import { Box, Flex } from "@chakra-ui/react";
+import {  Flex } from "@chakra-ui/react";
 import Head from "next/head";
 import { useState } from "react";
 import Card from "../components/Card";
 
 export default function Home({ data }) {
   const [advice, setAdvice] = useState(data.slip.advice);
+  const[id,setId]= useState(data.slip.id)
 
   const generateAdvice = async () => {
     const res = await fetch("https://api.adviceslip.com/advice");
     const results = await res.json();
     setAdvice(results.slip.advice);
+    setId(results.slip.id)
   };
 
   console.log(data);
@@ -21,7 +23,7 @@ export default function Home({ data }) {
         h="100vh"
         justify="center"
         align="center"
-        maxW="1440px"
+        
         minW="375px"
       >
         <Head>
@@ -31,7 +33,7 @@ export default function Home({ data }) {
         </Head>
         <Card
           advice={advice}
-          id={data.slip.id}
+          id={id}
           generateAdvice={generateAdvice}
         />
       </Flex>
@@ -39,7 +41,7 @@ export default function Home({ data }) {
   );
 }
 
-export async function getStaticProps(context) {
+export async function getServerSideProps() {
   const res = await fetch("https://api.adviceslip.com/advice");
   const data = await res.json();
   return {

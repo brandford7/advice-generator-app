@@ -1,4 +1,4 @@
-import { Box, Button, Flex, Img, Text } from "@chakra-ui/react";
+import { Box, Button, chakra, Img, Text } from "@chakra-ui/react";
 import React from "react";
 
 const Card = ({ advice, generateAdvice, id }) => {
@@ -21,7 +21,7 @@ const Card = ({ advice, generateAdvice, id }) => {
         <Text color="hsl(150, 100%, 66%)" mb="10px" mt="40px">
           Advice #{id}
         </Text>
-        <Text
+        <chakra.blockquote
           fontSize="28px"
           noOfLines="4"
           color="hsl(193, 38%, 86%)"
@@ -29,10 +29,11 @@ const Card = ({ advice, generateAdvice, id }) => {
           px="20px"
         >
           “{advice}”
-        </Text>
+        </chakra.blockquote>
         <Box pos="fixed" bottom={["320", "320", "370"]}>
           <Img
             src="/pattern-divider-desktop.svg"
+            alt=""
             h="15px"
             w="450px"
             zIndex="2"
@@ -40,13 +41,14 @@ const Card = ({ advice, generateAdvice, id }) => {
           />
           <Img
             src="/pattern-divider-mobile.svg"
+            alt=""
             zIndex="2"
             display={["flex", "flex", "none"]}
             h="15px"
           />
         </Box>
       </Box>
-      <Button
+      <Box
         borderColor="hsl(150, 100%, 66%)"
         display="flex"
         justifyContent="center"
@@ -66,8 +68,8 @@ const Card = ({ advice, generateAdvice, id }) => {
         }}
         onClick={generateAdvice}
       >
-        <Img src="/icon-dice.svg" h="20px" w="20px" />
-      </Button>
+        <Img src="/icon-dice.svg" alt="" h="20px" w="20px" />
+      </Box>
     </>
   );
 };
