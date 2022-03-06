@@ -45,6 +45,7 @@ const Card = ({ advice, generateAdvice, id }) => {
             zIndex="2"
             display={["flex", "flex", "none"]}
             h="15px"
+            w="450px"
           />
         </Box>
       </Box>
