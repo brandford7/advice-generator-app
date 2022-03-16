@@ -1,4 +1,4 @@
-import { Box, Button, chakra, Img, Text } from "@chakra-ui/react";
+import { Box, chakra, Img, Text } from "@chakra-ui/react";
 import React from "react";
 
 const Card = ({ advice, generateAdvice, id }) => {
@@ -8,10 +8,10 @@ const Card = ({ advice, generateAdvice, id }) => {
         bg=" hsl(217, 19%, 24%)"
         display="flex"
         flexDirection="column"
-        justifyContent="flex-start"
+        justifyContent="space-evenly"
         alignItems="center"
         mx={["20px", "20px", "0px"]}
-        w={["360px", "550px", "550px"]}
+        w={["350px", "550px", "550px"]}
         h={["350", "400", "340"]}
         borderRadius="10px"
         shadow="lg"
@@ -30,7 +30,7 @@ const Card = ({ advice, generateAdvice, id }) => {
         >
           “{advice}”
         </chakra.blockquote>
-        <Box pos="absolute" bottom={["320", "320", "370"]}>
+        <Box mb="20px">
           <Img
             src="/pattern-divider-desktop.svg"
             alt=""
@@ -52,12 +52,12 @@ const Card = ({ advice, generateAdvice, id }) => {
       <Box
         borderColor="hsl(150, 100%, 66%)"
         display="flex"
+        mt={["350px", "400px", "330px", "350px"]}
         justifyContent="center"
         alignItems="center"
         rounded="full"
         pos="absolute"
         shadow="lg"
-        bottom={["240px", "215px", "240px", "280px"]}
         zIndex="2"
         h="60px"
         w="60px"
