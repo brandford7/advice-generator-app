@@ -30,7 +30,7 @@ const Card = ({ advice, generateAdvice, id }) => {
         >
           “{advice}”
         </chakra.blockquote>
-        <Box pos="fixed" bottom={["320", "320", "370"]}>
+        <Box pos="absolute" bottom={["320", "320", "370"]}>
           <Img
             src="/pattern-divider-desktop.svg"
             alt=""
@@ -45,7 +45,7 @@ const Card = ({ advice, generateAdvice, id }) => {
             zIndex="2"
             display={["flex", "flex", "none"]}
             h="15px"
-            w="450px"
+            w={["250px", "380px", "450px"]}
           />
         </Box>
       </Box>
@@ -55,9 +55,9 @@ const Card = ({ advice, generateAdvice, id }) => {
         justifyContent="center"
         alignItems="center"
         rounded="full"
-        pos="fixed"
+        pos="absolute"
         shadow="lg"
-        bottom={["240px", "215px", "285px"]}
+        bottom={["240px", "215px", "240px"]}
         zIndex="2"
         h="60px"
         w="60px"
