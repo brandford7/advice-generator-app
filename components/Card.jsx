@@ -57,7 +57,7 @@ const Card = ({ advice, generateAdvice, id }) => {
         rounded="full"
         pos="absolute"
         shadow="lg"
-        bottom={["240px", "215px", "240px"]}
+        bottom={["240px", "215px", "240px",'280px']}
         zIndex="2"
         h="60px"
         w="60px"
