@@ -11,7 +11,7 @@ const Card = ({ advice, generateAdvice, id }) => {
         justifyContent="flex-start"
         alignItems="center"
         mx={["20px", "20px", "0px"]}
-        w="550px"
+        w={["360px", "550px", "550px"]}
         h={["350", "400", "340"]}
         borderRadius="10px"
         shadow="lg"
@@ -57,7 +57,7 @@ const Card = ({ advice, generateAdvice, id }) => {
         rounded="full"
         pos="absolute"
         shadow="lg"
-        bottom={["240px", "215px", "240px",'280px']}
+        bottom={["240px", "215px", "240px", "280px"]}
         zIndex="2"
         h="60px"
         w="60px"
